@@ -38,15 +38,11 @@
     >
       Reset
     <script>
-      let score =  JSON.parse(localStorage.getItem('score')); 
-      if(score === null)
-      {
-        score = {
+      let score =  JSON.parse(localStorage.getItem('score')) || {
           wins:0,
           lost:0,
           tie:0
-        }
-      }
+        }; 
       let compmove = "";
       let temp = "";
       let result = "";
